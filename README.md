@@ -1,35 +1,35 @@
-Multi_CLASS
+Multi_CLASS: cross-tracer angular power spectra of number counts computed using the Cosmic Linear Anisotropy Solving System (CLASS)
 ==============================================
 
+Main developers: Nicola Bellomo, José Luis Bernal and Giulio Scelfo
 
-This code will be publicly released upon acceptance of the related articles (see below). Please, contact Nicola Bellomo (nicola.bellomo@icc.ub.edu) or José Luis Bernal (jbernal2@jhu.edu) if you want to use it before.
+The code will be publicly released upon acceptance of the two related articles (see below). Please, contact Nicola Bellomo (nicola.bellomo@icc.ub.edu) or José Luis Bernal (jbernal2@jhu.edu) if you want to use it before.
 
-compute cross-correlations of nCls using the Cosmic Linear Anisotropy Solving System (CLASS)
 -----------------------------------------------------------------------------
 
-Multi_CLASS is a modification of the public Boltzmann code CLASS (see information below) that allows for the computation of the **angular cross-power spectra** of the number counts of two different tracers of the underlying density field. In other words, the standard `nCl` output of CLASS can now be computed for **two different tracers**, e.g., two different galaxy populations with their own redshift distribution, galaxy and magnification bias parameters, etc. 
+Multi_CLASS is a modification of the public Boltzmann code CLASS (see information below) that allows for the computation of the **cross-tracer angular power spectra** of the number count fluctuations for two different tracers of the underlying dark matter density field. In other words, it generalizes the standard `nCl` output option of CLASS to the case of **two different tracers**, e.g., two different galaxy populations with their own redshift distribution, galaxy and magnification bias parameters, etc. 
 
-Multi_CLASS also includes an implementation of the effect of **primordial non-Gaussianities of the local type**, parametrized by the parameter `f_NL` (following the large-scale structure convention), on the effective bias of the tracers of the underlying matter overdensities. This implementation also includes the possibility of a tilted non-Gaussian correction, parametrized by `n_NG`, with a pivot scale determined by `k_pivot_NG`.
+Multi_CLASS also includes an implementation of the effect of **primordial non-Gaussianities of the local type**, parametrized by the parameter `f_NL` (following the large-scale structure convention), on the effective bias of the tracers. There is also the possibility of having a tilted non-Gaussian correction, parametrized by `n_NG`, with a pivot scale determined by `k_pivot_NG`.
 
-Multi_CLASS already includes galaxy redshift distributions for forecoming galaxy surveys, with the ease of choosing between them (or a input file) from the parameters input file (e.g., `multi_explanatory.ini`). In addition, Multi_CLASS includes the possibility of using resolved gravitational wave events as a tracer.
+Multi_CLASS already includes galaxy redshift distributions for forthcoming galaxy surveys, with the ease of choosing between them (or a input file) from the parameters input file (e.g., `multi_explanatory.ini`). In addition, Multi_CLASS includes the possibility of using resolved gravitational wave events as a tracer.
 
 Getting started
 ---------------------
+
+The installation, compilation and running of Multi_CLASS is exactly the same as for the standard CLASS code, and does not require additional libraries or dependencies. Moreover, Multi_CLASS can be used as the standard CLASS (both directly with the c executable and the python wrapper). However, the name of some parameters controlling the `nCl` output has been modified for the sake of clarity. A commented example describing all relevant or modified parameters in CLASS can be found in the file `multi_explanatory.ini`.
 
 To check that the code runs, type:
 
     ./class multi_explanatory.ini
 
-The installation, compilation and running of Multi_CLASS is exactly the same as for the standard CLASS code, and does not require additional libraries or dependencies. Moreover, Multi_CLASS can be used as the standard CLASS (both directly with the c executable and the python wrapper). However, the name of some parameters controlling the `nCl` output has been modified for the sake of clarity. A commented example describing all relevant or modified parameters in CLASS can be found in the file `multi_explanatory.ini`. 
-
-The running times of Multi_CLASS are the same as those of the standard CLASS, with the only different that Multi_CLASS computes more cross-power spectra between redshift bins when `selection_multitracing = yes`: while for an autocorrelation Cl(z_1,z_2) = Cl(z_2,z_1) is always true, this is not necessarily the case for cross-correlations between two tracers. Therefore, if `selection_multitracing = yes` is used, the number of Cls columns in the output file will be NxN instead of Nx(N+1)/2, where N is the number of redshift bins used (if cross-correlations between all redshift bins are required). The number of cross-correlations between different redshift bins can be controlled as in the standard CLASS.
+The running times of Multi_CLASS are similar to those of the standard CLASS, with the only different that Multi_CLASS computes more cross-tracer angular power spectra between redshift bins when `selection_multitracing = yes`: while for an auto-tracer correlation Cl(z_1,z_2) = Cl(z_2,z_1), this is not necessarily the case for cross-correlations between two tracers. Therefore, if `selection_multitracing = yes` is used, the number of Cls columns in the output file will be NxN instead of Nx(N+1)/2, where N is the number of redshift bins used (if cross-correlations between all redshift bins are required). The number of cross-tracer correlations between different redshift bins can be controlled as in the standard CLASS.
 
 The same parameters input file used to compute the cross-tracer angular power spectra can be automatically used to compute the single tracer angular power spectra for the **first** tracer by using `selection_multitracing = no`.
 
 Using the code
 -------------------
 
-You can use Multi_CLASS freely, provided that in your publications, you cite the presenting papers of Multi_CLASS (where you can find more details):
+You can use Multi_CLASS freely, provided that in your publications you cite the presenting papers of Multi_CLASS (where you can find more details about the code):
 
 - [Beware of commonly used approximations I: errors in forecasts](PUTHEREARXIVLINK), Bellomo et al. (2020).
 - [Beware of commonly used approximations II: estimating systematic biases in the best-fit parameters](PUTHEREARXIVLINK), Bernal et al. (2020).
@@ -37,14 +37,6 @@ You can use Multi_CLASS freely, provided that in your publications, you cite the
 And, of course, cite the original CLASS papers, at least:
 
 - [The Cosmic Linear Anisotropy Solving System (CLASS) II: Approximation schemes](http://arxiv.org/abs/1104.2933), Blas, Lesgourgues and Tram (2011).
-
-Main developers
-------------------------
-
-- Nicola Bellomo
-- José Luis Bernal
-- Giulio Scelfo
-
 
 -------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------
