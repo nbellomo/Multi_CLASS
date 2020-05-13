@@ -1,7 +1,7 @@
 Multi_CLASS: cross-tracer angular power spectra of number counts computed using the Cosmic Linear Anisotropy Solving System (CLASS)
 ==============================================
 
-Main developers: Nicola Bellomo, José Luis Bernal and Giulio Scelfo
+**Main developers:** Nicola Bellomo, José Luis Bernal and Giulio Scelfo
 
 The code will be publicly released upon acceptance of the two related articles (see below). Please, contact Nicola Bellomo (nicola.bellomo@icc.ub.edu) or José Luis Bernal (jbernal2@jhu.edu) if you want to use it before.
 
