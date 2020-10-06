@@ -9,7 +9,7 @@ Multi_CLASS is a modification of the public Boltzmann code CLASS (see informatio
 
 Multi_CLASS also includes an implementation of the effect of **primordial non-Gaussianities of the local type**, parametrized by the parameter `f_NL` (following the large-scale structure convention), on the effective bias of the tracers. There is also the possibility of having a tilted non-Gaussian correction, parametrized by `n_NG`, with a pivot scale determined by `k_pivot_NG`.
 
-Multi_CLASS already includes galaxy redshift distributions for forthcoming galaxy surveys, with the ease of choosing between them (or a input file) from the parameters input file (e.g., `multi_explanatory.ini`). In addition, Multi_CLASS includes the possibility of using resolved gravitational wave events as a tracer.
+Multi_CLASS already includes galaxy redshift distributions for forthcoming galaxy surveys, with the ease of choosing between them (or an input file) from the parameters input file (e.g., `multi_explanatory.ini`). In addition, Multi_CLASS includes the possibility of using resolved gravitational wave events as a tracer.
 
 Getting started
 ---------------------
