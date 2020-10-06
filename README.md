@@ -31,8 +31,8 @@ Using the code
 
 You can use Multi_CLASS freely, provided that in your publications you cite the presenting papers of Multi_CLASS (where you can find more details about the code):
 
-- [Beware of commonly used approximations I: errors in forecasts](PUTHEREARXIVLINK), Bellomo et al. (2020).
-- [Beware of commonly used approximations II: estimating systematic biases in the best-fit parameters](PUTHEREARXIVLINK), Bernal et al. (2020).
+- [Beware of commonly used approximations I: errors in forecasts] [arXiv:2005.10384](https://arxiv.org/abs/2005.10384), Bellomo, Bernal, Scelfo, Raccanelli and Verde; JCAP **10** (2020) 016.
+- [Beware of commonly used approximations II: estimating systematic biases in the best-fit parameters] [arXiv:2005.09666](https://arxiv.org/abs/2005.09666), Bernal, Bellomo, Raccanelli and Verde; JCAP **10** (2020) 017.
 
 And, of course, cite the original CLASS papers, at least:
 
